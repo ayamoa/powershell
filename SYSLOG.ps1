@@ -1,4 +1,5 @@
-#Retrieve data from DHCP 404 device and send it to server
+#Function to send data from a server to an other server
+
 
 #$device = Import-Csv -Path "" -Delimiter ";" 
 $deviceJSON = $null
@@ -10,7 +11,7 @@ function SendTo-SysLog ($value) {
     
     #where to send
     $syslogIP = "IPSERVER"
-    $syslogPort = 
+    $syslogPort = 514
     $srcHost  = $env:computername + "." + $env:USERDOMAIN
     $date   = "date=`"$(Get-Date -Format "yyyy-MM-dd HH:mm:ss.fff")`""
    
