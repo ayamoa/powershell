@@ -1,15 +1,14 @@
 ﻿#ayamoa
 #11/3/2023
-#Sort files/photos in a folder by date. 1 folder created by months
-#You can create by years, months and days.
-
+#Sort files/photos in a folder by date. 
+#Folder created by years/months & days
 
 #Get files from the directory.
 $files = Get-ChildItem 'SourcePATH' -Recurse | where {!$_.PsIsContainer}
  
 # List files from folder and count.
-$files
-$files.count
+#$files
+Write-Host "$($files.count) files will be treated"
  
 # Choose a destination folder where all months & years folders will be created. 
 $DestinationFolder = 'DestPATH'
